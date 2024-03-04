@@ -17,18 +17,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# Set background color for the entire app
-st.markdown(
-    """
-    <style>
-        body {
-            background-color: #e6f7ff;  /* Light blue background color */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
 # Header with title and description
 st.title("Dependency Parser")
 st.write("Enter a sentence in the text area below and click 'Parse' to visualize its dependency tree.")
@@ -52,23 +40,3 @@ if st.button("Parse", key="parse_button"):
 
     # Display the dependency tree
     st.write(html, unsafe_allow_html=True)
-
-# Add some style to the UI
-st.markdown(
-    """
-    <style>
-        div.stButton > button {
-            background-color: #3498db;
-            color: white;
-            font-size: 16px;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        div.stTextArea > textarea {
-            border: 2px solid #3498db;
-            border-radius: 5px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
